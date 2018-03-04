@@ -4,90 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Enteriors</title>
 
     <style media="screen">
-
-    #home {
-      width: 100%;
-      height: auto;
-    }
-    section{
-      position: relative;
-      text-align: center;
-      color: black;
-    }
-    .center{
-      position: absolute;
-      top: 15%;
-      left: 5%;
-      font-size: 40px;
-      font-weight: bolder;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-    .center-bottom{
-      position: absolute;
-      top: 25%;
-      left: 8%;
-      font-size: 20px;
-      font-weight: bolder;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-    #para{
-      position: absolute;
-      top: 35%;
-      left: 18%;
-      font-size: 30px;
-      font-weight: bolder;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-    .text-block {
-      position: absolute;
-      top: 35%;
-      left: 18%;
-      font-size: 20px;
-      font-weight: bolder;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-
-    .button {
-      position: absolute;
-      top: 42%;
-      left: 28%;
-      background-color: #f44336;
-      border: 1px solid #222;
-      border-radius: 12px;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
-    .mySlides img:hover{
-      -ms-transform: scale(1.5); /* IE 9 */
-      -webkit-transform: scale(1.5); /* Safari 3-8 */
-      transform: scale(1.5);
-      opacity: 0.5;
-    }
-    footer{
-      background: #222;
-      padding: 10px;
-    }
-    footer p{
-      color: white;
-      text-align: center;
+    .header li a:active {
+      background-color: white;
+      color: #222;
     }
     </style>
+
   </head>
   <body>
     <div class="header">
       <ul>
         <li id="logo"><img src="s.png" height="60" width="60"></li>
-        <li id="name">Stay Well Interiors</li>
+        <li id="name">StayWell Interiors</li>
         <li><a href="#.html">Portfolio</a></li>
         <li><a href="testimonials.html">Testimonals</a></li>
         <li><a href="form.html">Enquiry form</a></li>
@@ -95,37 +28,118 @@
         <li><a href="#">Home</a></li>
       </ul>
     </div>
+
     <section>
       <img id="home" src="main.jpeg" alt="home">
       <div class="center">"Create the HOME you've always wanted..."</div>
-      <div class="center-bottom"><p>–-We can give you complete plan of action
-      for all work within your budget-–</p></div>
+      <div class="center-bottom">
+        <p>–-We can give you complete plan of action
+        for all work within your budget-–</p>
+      </div>
 
       <div class="text-block">
-
         <h4>Connect with us to plan your DREAM HOME</h4>
+      </div>
+
+      <a href="#" class="button">Get Started</a>
+    </section>
+
+    <div id="chooseus">
+      <br><br>
+      <h2><span>Why Choose Us</span></h2>
+      <div class="grid-container">
+        <div class="grid-item1">
+          REASONABLE PRICE
+          <p>Only at Home Makers will you see such a wonder -
+          International brands come with superior craftsmanship & up to
+          date knowledge of premium materials at a very reasonable price.
+          Professional service, designer expertise and variety of amazing
+          types of top finishes… What could be better?</p>
+        </div>
+        <div class="grid-item2">
+           FREE CONSULTATION
+            <p>We understand how difficult is to start thinking about a
+            renovation or get a designer house so we happily ignite the
+            process & gives free consultation & even provide a free quotation
+            . Once you contact Home Makers, all your worries about interior
+            end. Simply call us and we will be there to assist you with a
+            bunch of free advice, quote & a welcome drawing of your house.</p>
+        </div>
+        <div class="grid-item3">
+          24/7 SUPPORT
+          <p>Once you have availed Home Makers' services, we will be there to
+          help you at any point of time, be it day or night. We deliver
+          after-sale services round the clock, so feel free to call us anytime,
+          anywhere; sit back & relax.</p>
+        </div>
+        <div class="grid-item4">
+          WARRANTY
+          <p>The warranty given by us is undoubtedly & unconditionally
+          'Lifetime' on all our craftsmanship work, while warranty on
+          materials is definitely on the basis of the terms and conditions
+          given by the respective company. However, we will be available
+          to assist you 24x7, 365 days for the rest of your life.
+          No Conditions Apply !!!</p>
+        </div>
+        <div class="grid-item5">
+          FREE CONSULTATION
+          <p>We understand how difficult is to start thinking about a
+          renovation or get a designer house so we happily ignite the
+          process & gives free consultation & even provide a free quotation.
+          Once you contact Home Makers, all your worries about interior end.
+          Simply call us and we will be there to assist you with a bunch of free
+          advice, quote & a welcome drawing of your house.</p>
+        </div>
+        <div class="grid-item6">
+          'N’ NUMBER OF DESIGNS
+          <p>As satisfaction of our clients is our topmost aim, we shower
+          them with ‘n’ number of designs to choose from. Contemporary,
+          Modern, Roman, Minimalist, Hollywood Glam, Scandinavian,
+          Traditional, Rustic, Transitional, ... we give you a wide
+          variety of designs for uttermost contentment.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider">
+      <h2 class="w3-center">Our Recent Projects</h2>
+
+      <div class="w3-content w3-display-container">
+        <img class="mySlides" src="image1.jpg" style="width:100%">
+        <img class="mySlides" src="image6.jpg" style="width:100%">
+        <img class="mySlides" src="image3.jpg" style="width:100%">
+        <img class="mySlides" src="image4.jpg" style="width:100%">
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
+        <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
+        <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
 
       </div>
-      <a href="#" class="button">Get Started</a>
-
-    </section>
-    <h2 class="w3-center">Our Recent Projects</h2>
-
-    <div class="w3-content w3-display-container">
-      <img class="mySlides" src="image1.jpg" style="width:100%">
-      <img class="mySlides" src="image6.jpg" style="width:100%">
-      <img class="mySlides" src="image3.jpg" style="width:100%">
-      <img class="mySlides" src="image4.jpg" style="width:100%">
-
-      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-      <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
-      <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
-      <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
     </div>
+
+
+
     <footer>
-      <p>copyright Stay Well Interiors 2018</p>
+      <p>Copyright StayWell Interiors 2018</p>
     </footer>
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 5000); // Change image every 2 seconds
+      }
+    </script>
     <script>
       var slideIndex = 1;
       showDivs(slideIndex);

@@ -1,0 +1,112 @@
+#home {
+  width: 100%;
+  height: auto;
+  background: #222;
+}
+
+section{
+  position: relative;
+  text-align: center;
+  color: black;
+}
+.center{
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  font-size: 2.5vw;
+  font-weight: bolder;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.center-bottom{
+  position: absolute;
+  top: 25%;
+  left: 8%;
+  font-size: 1.5vw;
+  font-weight: bolder;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#para{
+  position: absolute;
+  top: 35%;
+  left: 18%;
+  font-size: 1vw;
+  font-weight: bolder;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.text-block h4{
+  position: absolute;
+  top: 35%;
+  left: 18%;
+  font-size: 1vw;
+  font-weight: bolder;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.button {
+  position: absolute;
+  top: 42%;
+  left: 24%;
+  background-color: #f44336;
+  border: 1px solid #222;
+  border-radius: 12px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1vw;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.slider{
+  background: #b5b5a6;
+}
+.mySlides img:hover{
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+  opacity: 0.5;
+}
+#chooseus{
+  background: #2d2d27;
+  margin: 20px 0;
+  color: white;
+  font-size: 1vw;
+}
+#chooseus h2 {
+ width: 80%;
+ text-align: center;
+ border-bottom: 1px solid #fcf1d1;
+ line-height: 0.1em;
+ margin:0 auto;
+}
+#chooseus h2 span {
+  color: white;
+  background: #2d2d27;
+}
+.grid-container{
+  margin: 0 auto;
+  color: black;
+  margin: 100px 150px;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  grid-gap: 10px;
+  background-color: #2196F3;
+}
+.grid-container > div{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2px;
+  text-align: center;
+  display: flex;
+ justify-content: center;
+}
+
+footer{
+  background: #222;
+  padding: 10px;
+}
+footer p{
+  color: white;
+  text-align: center;
+}

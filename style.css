@@ -1,15 +1,15 @@
 *{
   margin: 0;
   padding: 0;
-}*{
-  margin: 0;
-  padding: 0;
+}
+body{
+    background: #f4f4f2;
 }
 .header ul {
   list-style-type: none;
   overflow: hidden;
   font-size: 15px;
-  background-color: #222;
+  background: #222;
   }
 
 .header li {
@@ -35,17 +35,20 @@ padding: 5px 20px;
   text-align: center;
   padding: 20px 20px;
   text-decoration: none;
-
 }
 
 /* Change the link color to #111 (black) on hover */
 .header li a:hover {
-  background-color: #e54040;
   color: #222;
+  background:#fcf1d1;
+  border-top: solid;
+  border-color: red;
+/*#f7efd7#f7efd9#fff1c9*/;
+  border-bottom: white;
 }
 
 .header li a:active {
-  background-color: #2db300;
+  background-color: white;
   color: #222;
 }
 .headers li a:active {
