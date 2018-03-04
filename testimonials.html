@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Enteriors</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+  .container {
+      text-align: center;
+  }
+  .container img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <ul>
+    <li id="logo"><img src="s.png" height="60" width="60"></li>
+    <li id="name">Stay Well Interiors</li>
+    <li><a href="#.html">Portfolio</a></li>
+    <li><a href="testimonials.html">Testimonals</a></li>
+    <li><a href="form.html">Enquiry form</a></li>
+    <li><a href="#.html">Photo Gallery</a></li>
+    <li><a href="index.html">Home</a></li>
+  </ul>
+</div>
+<h2>Testimonials</h2>
+
+
+<div class="container">
+  <img src="im-500200020.png" alt="Avatar" style="width:90px">
+  <p><span>Ramesh punjabi.</span> </p>
+  <p>We feel fully satisfied with the entire work done. We appreciate the Sincerity, personal attention and team work which has made our house "as a dream come true". </p>
+</div>
+
+<div class="container">
+  <img src="test.jpg" alt="Avatar" style="width:90px">
+  <p><span>kirti shah.</span> </p>
+  <p>We are extremely satisfied with the design and execution of our new office at Andheri (east). I would also put on record that the project was delivered well within the committed timeline.</p>
+</div>
+
+<div class="container">
+  <img src="test1.jpg" alt="Avatar" style="width:90px">
+  <p><span>Raj panchal</span> </p>
+  <p>I would like to thank you for designing our dream home we imagined. We appreciate your patience and time spent in listening to our requirements and transforming them into reality.  </p>
+</div>
+
+<div class="container">
+  <img src="test2.jpg" alt="Avatar" style="width:90px">
+  <p><span>Mohit shinde.</span> </p>
+  <p>We are satisfied in the manner you have completed the project from its conceptualization to execution and to our requirements. </p>
+</div>
+
+</body>
+</html>

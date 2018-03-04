@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.header{
+  background-color: #222;
+  font-size: 250px;
+}
+.header ul li{
+  font-size: 250px;
+  list-style-type: none;
+  font-size: 15px;
+  background-color: #222;
+  }
+.header #logo{
+  clear: both;
+  float: left;
+  padding: 5px 20px;
+}
+.header li {
+  padding-top: 50px;
+  float: right;
+}
+.header #name{
+  color: white;
+  background: #222;
+  padding: 20px 5px;
+  float: left;
+  font-size: 20px;
+}
+.header li a {
+  display: block;
+  color: #c1afac;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+
+/* Change the link color to #111 (black) on hover */
+.header li a:hover {
+  background-color: #e54040;
+  color: white;
+}
+
+.header li a:active {
+  background-color: #ea2a2a;
+  color: white;
+}
+/*have to do responsive*/
+@media screen and (max-width: 600px) {
+
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Enteriors</title>
+
+    <style media="screen">
+
+    #home {
+      width: 100%;
+      height: auto;
+    }
+    section{
+      position: relative;
+      text-align: center;
+      color: black;
+    }
+    .center{
+      position: absolute;
+      top: 15%;
+      left: 5%;
+      font-size: 40px;
+      font-weight: bolder;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .center-bottom{
+      position: absolute;
+      top: 25%;
+      left: 8%;
+      font-size: 20px;
+      font-weight: bolder;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    #para{
+      position: absolute;
+      top: 35%;
+      left: 18%;
+      font-size: 30px;
+      font-weight: bolder;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .text-block {
+      position: absolute;
+      top: 35%;
+      left: 18%;
+      font-size: 20px;
+      font-weight: bolder;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .button {
+      position: absolute;
+      top: 42%;
+      left: 28%;
+      background-color: #f44336;
+      border: 1px solid #222;
+      border-radius: 12px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    .mySlides img:hover{
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Safari 3-8 */
+      transform: scale(1.5);
+      opacity: 0.5;
+    }
+    footer{
+      background: #222;
+      padding: 10px;
+    }
+    footer p{
+      color: white;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <ul>
+        <li id="logo"><img src="s.png" height="60" width="60"></li>
+        <li id="name">Stay Well Interiors</li>
+        <li><a href="#.html">Portfolio</a></li>
+        <li><a href="testimonials.html">Testimonals</a></li>
+        <li><a href="form.html">Enquiry form</a></li>
+        <li><a href="#.html">Photo Gallery</a></li>
+        <li><a href="#">Home</a></li>
+      </ul>
+    </div>
+    <section>
+      <img id="home" src="main.jpeg" alt="home">
+      <div class="center">"Create the HOME you've always wanted..."</div>
+      <div class="center-bottom"><p>–-We can give you complete plan of action
+      for all work within your budget-–</p></div>
+
+      <div class="text-block">
+
+        <h4>Connect with us to plan your DREAM HOME</h4>
+
+      </div>
+      <a href="#" class="button">Get Started</a>
+
+    </section>
+    <h2 class="w3-center">Our Recent Projects</h2>
+
+    <div class="w3-content w3-display-container">
+      <img class="mySlides" src="image1.jpg" style="width:100%">
+      <img class="mySlides" src="image6.jpg" style="width:100%">
+      <img class="mySlides" src="image3.jpg" style="width:100%">
+      <img class="mySlides" src="image4.jpg" style="width:100%">
+
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
+      <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
+      <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
+    </div>
+    <footer>
+      <p>copyright Stay Well Interiors 2018</p>
+    </footer>
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>
