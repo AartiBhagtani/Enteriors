@@ -2,128 +2,195 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <!-- responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-pink.min.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <title>Enteriors</title>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css"></link>
+    <link rel="stylesheet" href="css/index.css"></link>
+    <!-- title -->
+    <title>Enteriors - Solution for interior designing</title>
+    <script type="text/javascript">
+    var TxtType = function(el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 10) || 2000;
+      this.txt = '';
+      this.tick();
+      this.isDeleting = false;
+  };
 
-    <style media="screen">
-    .header li a:active {
-      background-color: white;
-      color: #222;
-    }
-    </style>
+  TxtType.prototype.tick = function() {
+      var i = this.loopNum % this.toRotate.length;
+      var fullTxt = this.toRotate[i];
 
+      if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+      } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+      }
+
+      this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+      var that = this;
+      var delta = 200 - Math.random() * 100;
+
+      if (this.isDeleting) { delta /= 2; }
+
+      if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+      }
+
+      setTimeout(function() {
+      that.tick();
+      }, delta);
+  };
+
+  window.onload = function() {
+      var elements = document.getElementsByClassName('typewrite');
+      for (var i=0; i<elements.length; i++) {
+          var toRotate = elements[i].getAttribute('data-type');
+          var period = elements[i].getAttribute('data-period');
+          if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+          }
+      }
+      // INJECT CSS
+      var css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+      document.body.appendChild(css);
+  };
+    </script>
   </head>
   <body>
-    <div class="header">
-      <ul>
-        <li id="logo"><img src="s.png" height="60" width="60"></li>
-        <li id="name">StayWell Interiors</li>
-        <li><a href="#.html">Portfolio</a></li>
-        <li><a href="testimonials.html">Testimonals</a></li>
-        <li><a href="form.html">Enquiry form</a></li>
-        <li><a href="#.html">Photo Gallery</a></li>
-        <li><a href="#">Home</a></li>
-      </ul>
-    </div>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="header mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Enteriors</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="index.html">Home</a>
+          <a class="mdl-navigation__link" href="port2.html">Photo Gallery</a>
+          <a class="mdl-navigation__link" href="finalForm.html">Form</a>
+          <a class="mdl-navigation__link" href="testimonials.html">Testimonals</a>
+          <a class="mdl-navigation__link" href="">Contact us</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+  <span class="mdl-layout-title">Enteriors</span>
+  <nav class="mdl-navigation mdl-layout--large-screen-only">
+    <a class="mdl-navigation__link" href="index.html">Home</a>
+    <a class="mdl-navigation__link" href="port2.html">Photo Gallery</a>
+    <a class="mdl-navigation__link" href="finalForm.html">Form</a>
+    <a class="mdl-navigation__link" href="testimonials.html">Testimonals</a>
+    <a class="mdl-navigation__link" href="">Contact us</a>
+  </nav>
+</div>
+    <main class="mdl-layout__content">
+      <!-- typewriter effect -->
+      <div class="page-content">
+        <img id="home" src="img/home.jpeg" alt="home">
+        <h1  class="center">
+          <a style="font-size: 30px;" href="" class="typewrite" data-period="2000" data-type='[ "Create the Home You always wanted..." ]'>
+            <span class="wrap"></span>
+          </a>
+        </h1>
+      </div>
+      <div class="body-content">
+        <h1><span>Why Choose Us</span></h1>
+        <div class="grid-container">
+          <div class="griditem4">
+            <h4>"WARRANTY"</h4>
+            <p>The warranty given by us is undoubtedly & unconditionally
+            'Lifetime' on all our craftsmanship work, while warranty on
+            materials is definitely on the basis of the terms and conditions
+            given by the respective company. However, we will be available
+            to assist you 24x7, 365 days for the rest of your life.
+            No Conditions Apply !!!</p>
+          </div>
 
-    <section>
-      <img id="home" src="main.jpeg" alt="home">
-      <div class="center">"Create the HOME you've always wanted..."</div>
-      <div class="center-bottom">
-        <p>–-We can give you complete plan of action
-        for all work within your budget-–</p>
+          <div class="griditem2">
+             <h4>"FREE CONSULTATION"</h4>
+              <p>We understand how difficult is to start thinking about a
+              renovation or get a designer house so we happily ignite the
+              process & gives free consultation & even provide a free quotation
+              . Once you contact Home Makers, all your worries about interior
+              end. Simply call us and we will be there to assist you with a
+              bunch of free advice, quote & a welcome drawing of your house.</p>
+          </div>
+          <div class="griditem1">
+            <h4>"REASONABLE PRICE"</h4>
+            <p>Only at Home Makers will you see such a wonder -
+            International brands come with superior craftsmanship & up to
+            date knowledge of premium materials at a very reasonable price.
+            Professional service, designer expertise and variety of amazing
+            types of top finishes… What could be better?</p>
+          </div>
+          <div class="griditem3">
+            <h4>"24/7 SUPPORT"</h4>
+            <p>Once you have availed Home Makers' services, we will be there to
+            help you at any point of time, be it day or night. We deliver
+            after-sale services round the clock, so feel free to call us anytime,
+            anywhere; sit back & relax.</p>
+          </div>
+
+          <div class="griditem5">
+            <h4>"FREE CONSULTATION"</h4>
+            <p>We understand how difficult is to start thinking about a
+            renovation or get a designer house so we happily ignite the
+            process & gives free consultation & even provide a free quotation.
+            Once you contact Home Makers, all your worries about interior end.
+            Simply call us and we will be there to assist you with a bunch of free
+            advice, quote & a welcome drawing of your house.</p>
+          </div>
+
+      </div>
+
+      <div class="slider">
+        <h2 class="w3-center">Our Recent Projects</h2>
+
+        <div class="w3-content w3-display-container">
+          <img class="mySlides" src="img/image1.jpg" style="width:100%">
+          <img class="mySlides" src="img/image6.jpg" style="width:100%">
+          <img class="mySlides" src="img/image3.jpg" style="width:100%">
+          <img class="mySlides" src="img/image4.jpg" style="width:100%">
+
+          <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+          <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
+          <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
+          <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
+        </div>
       </div>
 
       <div class="text-block">
         <h4>Connect with us to plan your DREAM HOME</h4>
+        <button onclick="window.location.href='form.html'" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Get Started</button>
       </div>
 
-      <a href="#" class="button">Get Started</a>
-    </section>
+    </main>
 
-    <div id="chooseus">
-      <br><br>
-      <h2><span>Why Choose Us</span></h2>
-      <div class="grid-container">
-        <div class="grid-item1">
-          REASONABLE PRICE
-          <p>Only at Home Makers will you see such a wonder -
-          International brands come with superior craftsmanship & up to
-          date knowledge of premium materials at a very reasonable price.
-          Professional service, designer expertise and variety of amazing
-          types of top finishes… What could be better?</p>
-        </div>
-        <div class="grid-item2">
-           FREE CONSULTATION
-            <p>We understand how difficult is to start thinking about a
-            renovation or get a designer house so we happily ignite the
-            process & gives free consultation & even provide a free quotation
-            . Once you contact Home Makers, all your worries about interior
-            end. Simply call us and we will be there to assist you with a
-            bunch of free advice, quote & a welcome drawing of your house.</p>
-        </div>
-        <div class="grid-item3">
-          24/7 SUPPORT
-          <p>Once you have availed Home Makers' services, we will be there to
-          help you at any point of time, be it day or night. We deliver
-          after-sale services round the clock, so feel free to call us anytime,
-          anywhere; sit back & relax.</p>
-        </div>
-        <div class="grid-item4">
-          WARRANTY
-          <p>The warranty given by us is undoubtedly & unconditionally
-          'Lifetime' on all our craftsmanship work, while warranty on
-          materials is definitely on the basis of the terms and conditions
-          given by the respective company. However, we will be available
-          to assist you 24x7, 365 days for the rest of your life.
-          No Conditions Apply !!!</p>
-        </div>
-        <div class="grid-item5">
-          FREE CONSULTATION
-          <p>We understand how difficult is to start thinking about a
-          renovation or get a designer house so we happily ignite the
-          process & gives free consultation & even provide a free quotation.
-          Once you contact Home Makers, all your worries about interior end.
-          Simply call us and we will be there to assist you with a bunch of free
-          advice, quote & a welcome drawing of your house.</p>
-        </div>
-        <div class="grid-item6">
-          'N’ NUMBER OF DESIGNS
-          <p>As satisfaction of our clients is our topmost aim, we shower
-          them with ‘n’ number of designs to choose from. Contemporary,
-          Modern, Roman, Minimalist, Hollywood Glam, Scandinavian,
-          Traditional, Rustic, Transitional, ... we give you a wide
-          variety of designs for uttermost contentment.</p>
-        </div>
-      </div>
-    </div>
+<!--
+<footer>
+  <p>Copyright StayWell Interiors 2018</p>
+</footer>:
+-->
 
-    <div class="slider">
-      <h2 class="w3-center">Our Recent Projects</h2>
-
-      <div class="w3-content w3-display-container">
-        <img class="mySlides" src="image1.jpg" style="width:100%">
-        <img class="mySlides" src="image6.jpg" style="width:100%">
-        <img class="mySlides" src="image3.jpg" style="width:100%">
-        <img class="mySlides" src="image4.jpg" style="width:100%">
-
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-        <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
-        <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
-        <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
-
-      </div>
-    </div>
-
-
-
-    <footer>
-      <p>Copyright StayWell Interiors 2018</p>
-    </footer>
     <script>
       var myIndex = 0;
       carousel();
