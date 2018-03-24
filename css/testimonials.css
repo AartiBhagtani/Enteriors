@@ -1,0 +1,50 @@
+main{
+  background-image: url("../img/social-unsplash.jpg");
+  background-color: none;
+}
+
+.main #chooseus{
+  background-color: black;
+  font-size: 2vw;
+}
+main #chooseus h2 {
+
+ text-align: center;
+ border-bottom: 1px solid #fcf1d1;
+ line-height: 0.1em;
+ margin:0 auto;
+}
+#chooseus h2 span {
+  color: black;
+}
+main .grid-container > div h4{
+  margin: 20px;
+}
+.grid-container{
+  margin: 0 auto;
+  margin: 10px 150px;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  grid-gap: 20px;
+}
+.grid-container > div{
+  opacity: 0.5;
+  background: black;
+  color: white;
+  padding: 10px;
+  text-align: justify;
+  display: flex;
+  text-indent: justify-content;
+  justify-content: center;
+}
+.grid-container > div:hover{
+  box-shadow: 5px 5px 5px #808182;
+}
+@media screen and (max-width: 900px)
+{
+  .grid-container{
+    grid-template-columns: auto;
+    margin: 20px;
+  }
+}
