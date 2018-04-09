@@ -9,28 +9,63 @@
     <!-- Bootstrap:  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- stylesheet -->
     <link rel="stylesheet" href="css/style.css"></link>
     <!-- title -->
     <title>Enteriors - Solution for interior designing</title>
     <style>
-    .tab,.tab2 {
-      float: left;
-      margin-left: 150px;
-      padding: 50px;
-       /* Should be removed. Only for demonstration */
-    }
-    /* Clear floats after the columns */
-    .first:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    #map {
-      height: 500px;
-      width: 100%;
-    }
+      body{
+        background: #b9d0b2;
+      }
+      .inside{
+        background: rgb(200, 192, 196);
+      }
+      .container{
+        padding: 50px;
+      }
+      .containers{
+        margin-left: 400px;
+        padding: 50px;
+      }
+      .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 70px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+      }
+
+      .fa:hover {
+        opacity: 0.7;
+      }
+
+      .fa-facebook {
+      background: #3B5998;
+      color: white;
+      }
+
+      .fa-twitter {
+      background: #55ACEE;
+      color: white;
+      }
+
+      .fa-google {
+      background: #dd4b39;
+      color: white;
+      }
+
+      .fa-linkedin {
+      background: #007bb5;
+      color: white;
+      }
+
+      #map {
+        height: 500px;
+        width: 100%;
+      }
     </style>
 
   </head>
@@ -63,7 +98,7 @@
     <a class="mdl-navigation__link" href="contact_us.html">Contact us</a>
   </nav>
 </div>
-    <div id="map"></div>
+  <div id="map"></div>
     <script>
       function initMap() {
         var uluru = {lat: 19.2591, lng: 72.9844};
@@ -78,33 +113,42 @@
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1WNVwHt1EslQCVjk9Dwiys9GpDfJszJc&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1WNVwHt1EslQCVjk9Dwiys9GpDfJszJc&callback=initMap">
     </script>
-
-    <form id="regForm" action="/action_page.php">
-      <div class="first">
-      <!-- One "tab" for each step in the form: -->
-      <div class="tab"><h2>SEND US MESSAGE:</h2>
-        <br><br>
-        <p><input placeholder="First name..." oninput="this.className = ''" name="fname"></p>
-        <p><input placeholder="Last name..." oninput="this.className = ''" name="lname"></p>
-      <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-        <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+    <div class="inside">
+      <div class="containers">
+        <div class="row">
+          <div class="col-sm">
+            <h2>Address</h2>
+            <p>A/1702, Rhodas,<br>
+            Hirandanani Estate,<br>
+            Thane (W), Mumbai-400 053<br>
+          </div>
+          <div class="col-sm">
+            <h2>Contact Us</h2>
+            <B>Phone:</B> 022 2673 0270<br>
+            <B>Email:</B> enteriors@gmail.com
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="tab2">
-    <h2>CONTACT INFO </h2>
-    <p>A/1702, Rhodas,<br>
-    Hirandanani Estate,<br>
-    Patlipada,<br>
-    Thane (West),<br>
-    Mumbai-400 053<br>
-    <br>
-    <br>
-    <B>Cell:</B> 771 88888 77<br>
-    <B>Phone:</B> 022 2673 0270<br>
-    <B>Email:</B> enteriors@gmail.com
-    </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <a href="#" class="fa fa-facebook"></a>
+        </div>
+        <div class="col-sm">
+          <a href="#" class="fa fa-twitter"></a>
+        </div>
+        <div class="col-sm">
+          <a href="#" class="fa fa-google"></a>
+        </div>
+        <div class="col-sm">
+          <a href="#" class="fa fa-linkedin"></a>
+        </div>
+      </div>
     </div>
+  </div>
     </div>
   </body>
 </html>
