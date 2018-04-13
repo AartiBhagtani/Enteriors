@@ -1,0 +1,128 @@
+*{
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+a:hover{
+  text-decoration: none;
+}
+.header{
+  background: #222;
+}
+.header a:hover{
+  background: #fffce2;
+  color: black;
+  border-top: 6px solid red;
+}
+/* Responsive image */
+#home{
+  width: 100%;
+  height: auto;
+  background: #222;
+}
+/* typewriter effect */
+.center{
+  position: absolute;
+  top: 38%;
+  left: 5%;
+  font-size: 2.5vw;
+  font-weight: bolder;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.center a{
+  text-decoration: none;
+  color: black;
+}
+.body-content{
+  background: #d3d3d3;
+  margin-top: -30px;
+  font-size: 1vm;
+  text-align: center;
+  padding: 25px;
+}
+.body-content>div{
+  margin: 50px;
+}
+.body-content .griditem1,.griditem2,.griditem3,.griditem4,.griditem5,.griditem6{
+  margin: 50px 100px;
+}
+.body-content .griditem1:hover{
+  box-shadow: 4px 2px 4px #222;
+}
+.griditem1{
+  background: #e91e63;
+  padding: 20px;
+  color: #111;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+.griditem1:hover,.griditem2:hover,.griditem3:hover,
+.griditem6:hover,.griditem5:hover,.griditem4:hover{
+  color: white;
+}
+.body-content .griditem2{
+  margin: 50px 100px;
+}
+.body-content .griditem2:hover{
+  box-shadow: 4px 2px 4px #222;
+}
+.griditem2{
+  background: #425e66;
+  padding: 20px;
+  color: #111;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+.body-content .griditem3:hover{
+  box-shadow: 4px 2px 4px #222;
+}
+.griditem3{
+  background: #009688;
+  padding: 20px;
+  color: white;
+  color: #111;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+
+.body-content .griditem4:hover{
+  box-shadow: 4px 2px 4px #222;
+}
+.griditem4{
+  background: #c11f1f;
+  padding: 20px;
+  color: white;
+  color: #111;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+
+.body-content .griditem5:hover{
+  box-shadow: 4px 2px 4px #222;
+}
+.griditem5{
+  background: #1d2b44;
+  padding: 20px;
+
+  color: #bab2b2;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+.body-content .griditem6:hover{
+  box-shadow: 4px 2px 4px #222;
+}
+.griditem6{
+  background: #ff5722;
+  padding: 20px;
+  color: #111;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+footer{
+  background: #222;
+  padding: 10px;
+}
+footer p{
+  color: white;
+  text-align: center;
+}

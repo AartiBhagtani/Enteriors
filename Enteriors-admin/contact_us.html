@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-pink.min.css" />
+    <!-- Bootstrap:  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css"></link>
+    <!-- title -->
+    <title>Enteriors - Solution for interior designing</title>
+    <style>
+      body{
+        background: #b9d0b2;
+      }
+      .inside{
+        background: rgb(200, 192, 196);
+      }
+      .container{
+        padding: 50px;
+      }
+      .containers{
+        margin-left: 400px;
+        padding: 50px;
+      }
+      .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 70px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+      }
+
+      .fa:hover {
+        opacity: 0.7;
+      }
+
+      .fa-facebook {
+      background: #3B5998;
+      color: white;
+      }
+
+      .fa-twitter {
+      background: #55ACEE;
+      color: white;
+      }
+
+      .fa-google {
+      background: #dd4b39;
+      color: white;
+      }
+
+      .fa-linkedin {
+      background: #007bb5;
+      color: white;
+      }
+
+      #map {
+        height: 500px;
+        width: 100%;
+      }
+    </style>
+
+  </head>
+  <body>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="header mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Enteriors</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="index.html">Home</a>
+          <a class="mdl-navigation__link" href="photo_gallery.html">Photo Gallery</a>
+          <a class="mdl-navigation__link" href="form.html">Form</a>
+          <a class="mdl-navigation__link" href="testimonials.html">Testimonals</a>
+          <a class="mdl-navigation__link" href="Records.html">Show Records</a>
+          <a class="mdl-navigation__link" href="mail.php">Send Email</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+  <span class="mdl-layout-title">Enteriors</span>
+  <nav class="mdl-navigation">
+    <a class="mdl-navigation__link" href="index.html">Home</a>
+    <a class="mdl-navigation__link" href="photo_gallery.html">Photo Gallery</a>
+    <a class="mdl-navigation__link" href="form.html">Form</a>
+    <a class="mdl-navigation__link" href="testimonials.html">Testimonals</a>
+    <a class="mdl-navigation__link" href="Records.html">Show Records</a>
+    <a class="mdl-navigation__link" href="mail.php">Send Email</a>
+  </nav>
+</div>
+  <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 19.2591, lng: 72.9844};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1WNVwHt1EslQCVjk9Dwiys9GpDfJszJc&callback=initMap">
+    </script>
+    <div class="inside">
+      <div class="containers">
+        <div class="row">
+          <div class="col-sm">
+            <h2>Address</h2>
+            <p>A/1702, Rhodas,<br>
+            Hirandanani Estate,<br>
+            Thane (W), Mumbai-400 053<br>
+          </div>
+          <div class="col-sm">
+            <h2>Contact Us</h2>
+            <B>Phone:</B> 022 2673 0270<br>
+            <B>Email:</B> enteriors@gmail.com
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <a href="#" class="fa fa-facebook"></a>
+        </div>
+        <div class="col-sm">
+          <a href="#" class="fa fa-twitter"></a>
+        </div>
+        <div class="col-sm">
+          <a href="#" class="fa fa-google"></a>
+        </div>
+        <div class="col-sm">
+          <a href="#" class="fa fa-linkedin"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </body>
+</html>

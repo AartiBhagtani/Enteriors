@@ -1,0 +1,40 @@
+*{
+  font-size: 2.2vw;
+}
+.slider{
+  padding: 40px;
+}
+.body-content{
+  width: 100%;
+  justify-content: center ;
+}
+.slider .w3-center{
+  margin-bottom: 40px;
+  text-align: center;
+}
+.mySlides img:hover{
+  transform: scale(1.5);
+  opacity: 0.5;
+}
+.text-block{
+  padding: 50px;
+  text-align: center;
+  background: #e8e8e8;
+  font-weight: bolder;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+footer{
+  background: #222;
+  padding: 10px;
+}
+footer p{
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px)
+{
+  .body-content{
+    //for div
+  }
+}
